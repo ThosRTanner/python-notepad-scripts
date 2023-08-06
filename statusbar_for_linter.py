@@ -70,7 +70,7 @@ def override_status_bar(args):
                 statusbar_handle, SB_SETPARTS, len(nparts), addressof(nparts)
             )
 
-def main():    
+def main():
     hwnd = FindWindow(u"Notepad++", None)
     EnumChildWindows(hwnd, WNDENUMPROC(find_status_bar), 0)
 
